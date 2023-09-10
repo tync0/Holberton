@@ -1,4 +1,4 @@
-HTML
+**HTML**
 The body tag of all of your webpages (including index.html and tweets.html) must contain exactly three direct sub-tags in that order: header, main and footer.
 The header tag must contain an unordered list (the ul and li tags) of links (the a tag) to each of your webpages. As you may have understood, this will serve as a navigation for your website.
 The footer tag must contain one paragraph with the sentence Made by Tuncay Isgəndərli for a href="https://apply.holbertonschool.com" target="_blank"Holberton School/a.
@@ -6,14 +6,14 @@ The main tag must contain two direct sub-tags in that order: article and aside.
 article contains the content of your webpage: texts, links, images, tweets, … This is the part of index.html and tweets.html that you have already written, and you must now write it as you like for the other pages.
 aside contains a single paragraph, just reading for now "placeholder to add comment thread later".
 
-CSS
+**CSS**
 Both container tags, body and main must be told that they are containers to flexible boxes: you need to apply the display: flex property to both of them.
 However, body contains a column of three boxes (header, main and footer), therefore you must apply the flex-direction: column property to body; whereas main contains a row of 2 boxes (article and aside), so you must apply the flex-direction: row property to main.
 Ensure the main tag keeps an automatic height and width, by applying the flex: auto property to it.
 To wrap up the layout, you want to be sure that your content (article) takes ⅔ of the width of the page, and your aside takes ⅓; you can assign to them the number of boxes they should fill in. This is done by applying the property flex: 2 to article (using up 2 boxes), and flex: 1 to aside (using up 1 box).
 Finally, you want to be sure that the user can scroll within your article and your aside. You can do this by applying the overflow-y: auto CSS property to both of them.
 
-JS
+**JS**
 Before anything, start by copy-pasting this into your behavior.js file:
 
 document.addEventListener("DOMContentLoaded", function(event) {
