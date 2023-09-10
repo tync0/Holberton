@@ -1,17 +1,17 @@
 HTML
-The <body> tag of all of your webpages (including index.html and tweets.html) must contain exactly three direct sub-tags in that order: <header>, <main> and <footer>.
-The <header> tag must contain an unordered list (the <ul> and <li> tags) of links (the <a> tag) to each of your webpages. As you may have understood, this will serve as a navigation for your website.
-The <footer> tag must contain one paragraph with the sentence Made by Tuncay Isgəndərli for <a href="https://apply.holbertonschool.com" target="_blank">Holberton School</a>.
-The <main> tag must contain two direct sub-tags in that order: <article> and <aside>.
-<article> contains the content of your webpage: texts, links, images, tweets, … This is the part of index.html and tweets.html that you have already written, and you must now write it as you like for the other pages.
-<aside> contains a single paragraph, just reading for now "placeholder to add comment thread later".
+The body tag of all of your webpages (including index.html and tweets.html) must contain exactly three direct sub-tags in that order: header, main and footer.
+The header tag must contain an unordered list (the ul and li tags) of links (the a tag) to each of your webpages. As you may have understood, this will serve as a navigation for your website.
+The footer tag must contain one paragraph with the sentence Made by Tuncay Isgəndərli for a href="https://apply.holbertonschool.com" target="_blank"Holberton School/a.
+The main tag must contain two direct sub-tags in that order: article and aside.
+article contains the content of your webpage: texts, links, images, tweets, … This is the part of index.html and tweets.html that you have already written, and you must now write it as you like for the other pages.
+aside contains a single paragraph, just reading for now "placeholder to add comment thread later".
 
 CSS
-Both container tags, <body> and <main> must be told that they are containers to flexible boxes: you need to apply the display: flex property to both of them.
-However, <body> contains a column of three boxes (<header>, <main> and <footer>), therefore you must apply the flex-direction: column property to <body>; whereas <main> contains a row of 2 boxes (<article> and <aside>), so you must apply the flex-direction: row property to <main>.
-Ensure the <main> tag keeps an automatic height and width, by applying the flex: auto property to it.
-To wrap up the layout, you want to be sure that your content (article) takes ⅔ of the width of the page, and your aside takes ⅓; you can assign to them the number of boxes they should fill in. This is done by applying the property flex: 2 to <article> (using up 2 boxes), and flex: 1 to <aside> (using up 1 box).
-Finally, you want to be sure that the user can scroll within your <article> and your <aside>. You can do this by applying the overflow-y: auto CSS property to both of them.
+Both container tags, body and main must be told that they are containers to flexible boxes: you need to apply the display: flex property to both of them.
+However, body contains a column of three boxes (header, main and footer), therefore you must apply the flex-direction: column property to body; whereas main contains a row of 2 boxes (article and aside), so you must apply the flex-direction: row property to main.
+Ensure the main tag keeps an automatic height and width, by applying the flex: auto property to it.
+To wrap up the layout, you want to be sure that your content (article) takes ⅔ of the width of the page, and your aside takes ⅓; you can assign to them the number of boxes they should fill in. This is done by applying the property flex: 2 to article (using up 2 boxes), and flex: 1 to aside (using up 1 box).
+Finally, you want to be sure that the user can scroll within your article and your aside. You can do this by applying the overflow-y: auto CSS property to both of them.
 
 JS
 Before anything, start by copy-pasting this into your behavior.js file:
@@ -31,16 +31,16 @@ Once you've found it, type alert('Hello!'); in it. The dialogue box should show 
 Inserting a large image in the document
 Well, you know how to do that! Find a large image online (at least 800 pixels wide), and use its URL to insert it inside your document, wherever you want. You will notice that even if it is wider than your website, it won't overflow, and will resize nicely, because we set a CSS rule for you, to constrain its size.
 
-Then, we want this image to be small at first; and for this too, we already set a CSS rule for you. Simply add this attribute to your <img> tag: class="small" in your HTML code. Refresh, and you see it's much smaller.
+Then, we want this image to be small at first; and for this too, we already set a CSS rule for you. Simply add this attribute to your img tag: class="small" in your HTML code. Refresh, and you see it's much smaller.
 
 The whole point of this part of the project, is that you will use JavaScript to remove this "small" class (and therefore the image will grow) or putting it back (therefore it will get back to being small) when the user clicks.
 
 Isolating the HTML element inside a variable
 This challenge is all about "listening" to the event "user clicked on this image", and then changing the image's size when it happens; therefore, the first thing to do is to is to capture this image HTML element in a JavaScript variable that we'll be able to manipulate.
 
-The smartest way to capture one particular HTML element with JavaScript is to give it a unique ID (it's like giving it a first name!), and catch it by giving JavaScript this ID. It's easy to do, you can simply add the attribute id="smart_thumbnail" to your <img> tag, and there it is, now identifiable!
+The smartest way to capture one particular HTML element with JavaScript is to give it a unique ID (it's like giving it a first name!), and catch it by giving JavaScript this ID. It's easy to do, you can simply add the attribute id="smart_thumbnail" to your img tag, and there it is, now identifiable!
 
-Then, after refreshing your page, you can run this in your browser's JavaScript console, and you'll see that it indeed returns an element, which is your <img> element:
+Then, after refreshing your page, you can run this in your browser's JavaScript console, and you'll see that it indeed returns an element, which is your img element:
 
 document.getElementById("smart_thumbnail");
 You can copy-paste this line into your behavior.js file; but you also have to capture the result in a variable called thumbnailElement, so that we can manipulate it more easily later in our JavaScript code. All together, it will look like this:
