@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Installing Mango Automation on CentOS</title>
+    <link href="https://apply.holbertonschool.com/level2/school.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tweets.html">Tweets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Installing Mango Automation on CentOS</h2>
+
+            <p>Mango SCADA is an open-source, web-based SCADA (Supervisory Control and Data Acquisition) system that allows users to monitor and control industrial processes.</p>
+
+            <h3>Prerequisites</h3>
+            <p>Before you begin, make sure you have the following:</p>
+            <ul>
+                <li>A CentOS machine with root access</li>
+                <li>Java Runtime Environment (JRE) 8 or newer</li>
+                <li>At least 1GB of RAM</li>
+            </ul>
+
+            <h3>Step 1: Install Java</h3>
+            <p>Mango SCADA requires Java to run. You can install the latest version of Java by running the following command:</p>
+
+            <pre><code>sudo yum install java-1.8.0-openjdk</code></pre>
+
+            <h3>Step 2: Download Mango SCADA</h3>
+            <p>You can download the latest version of Mango SCADA from the official website. Choose the appropriate package for your machine's operating system.</p>
+
+            <pre><code>curl -o install-mango.sh https://raw.githubusercontent.com/MangoAutomation/ma-core-public/main/Core/bin/install-mango.sh</code></pre>
+
+            <pre><code>chmod +x install-mango.sh</code></pre>
+
+            <pre><code>sudo ./install-mango.sh</code></pre>
+
+            <h3>Step 3: Run the script</h3>
+            <p>The script will prompt you to enter details about where to install Mango, which version of Mango to install, etc. Hit enter and accept the default option shown inside the square brackets [default]. Yes/no answers must be written as ‘yes’ or ‘no,’ ‘y’ or ‘n’ are not sufficient.</p>
+
+            <p>In my case, I use all defaults.</p>
+
+            <pre><code>sh install-mango.sh</code></pre>
+
+            <h3>Step 4: Start Mango</h3>
+            <p>After the installation was successful, we need to start our local host. Write the following command:</p>
+
+            <pre><code>systemctl start mango</code></pre>
+
+            <p>You can check the status of the Mango:</p>
+
+            <pre><code>systemctl status mango</code></pre>
+
+            <p>Mango should now be running on your machine. You can access the Mango web interface by visiting <a href="http://localhost:8443/">http://localhost:8443/</a> in your web browser.</p>
+
+            <h3>Step 5: Log in</h3>
+            <p>For the default username is admin, and the password is admin.</p>
+
+            <pre><code>{"username": "admin","password": "admin"}</code></pre>
+
+            <p>Push agree with the term after login.</p>
+
+            <h2>Conclusion</h2>
+            <p>You have successfully installed Mango SCADA on your CentOS machine. You can now start monitoring and controlling your industrial processes with Mango.</p>
+        </article>
+    </main>
+    <footer>
+        <p>Made by Tuncay Isgəndərli for <a href="https://apply.holbertonschool.com" target="_blank">Holberton School</a></p>
+    </footer>
+</body>
+</html>

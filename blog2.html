@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Connecting to PostgreSQL with Rust and Diesel</title>
+    <link href="https://apply.holbertonschool.com/level2/school.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Connecting to PostgreSQL with Rust and Diesel</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tweets.html">Tweets</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Connecting to PostgreSQL with Rust and Diesel</h2>
+
+            <p>Rust is a programming language that is known for its performance and safety. One of the features that makes Rust unique is its built-in support for concurrency and parallelism, which makes it well-suited for building high-performance systems.</p>
+
+            <p>One of the most popular databases for high-performance systems is PostgreSQL. PostgreSQL is an open-source relational database management system that is known for its reliability and robustness.</p>
+
+            <p>In this blog post, we will take a look at how to connect to a PostgreSQL database using Rust. We will use the diesel library, which is a popular ORM (Object-Relational Mapping) library for Rust.</p>
+
+            <h3>Prerequisites</h3>
+            <p>Before we start, make sure you have Rust and PostgreSQL installed on your machine. You can check if Rust is installed by running the following command:</p>
+
+            <pre><code>rustc --version</code></pre>
+
+            <p>You should see the version of Rust that is currently installed on your machine.</p>
+
+            <p>Next, we need to install the diesel library. You can do this by adding the following to your Cargo.toml file:</p>
+
+            <pre><code>[dependencies]
+diesel = { version = "1.4", features = ["postgres"] }</code></pre>
+
+            <p>Now we can create a new Rust project using the following command:</p>
+
+            <pre><code>cargo new rust-postgres --bin</code></pre>
+
+            <p>This will create a new Rust project called “rust-postgres” in the current directory.</p>
+
+            <h3>Connecting to PostgreSQL</h3>
+            <p>In order to connect to a PostgreSQL database, we will first need to create a new database. You can do this by running the following command:</p>
+
+            <pre><code>createdb rust_postgres</code></pre>
+
+            <p>This will create a new database called “rust_postgres”.</p>
+
+            <p>Next, we will need to add the following code to our main.rs file:</p>
+
+            <pre><code>extern crate diesel;
+use diesel::prelude::*;
+use diesel::pg::PgConnection;
+
+fn main() {
+    let connection = PgConnection::establish("postgres://username:password@localhost/rust_postgres").unwrap();
+    println!("Connection to the database established!");
+}</code></pre>
+
+            <p>In the above code, we are using the PgConnection struct from the diesel library to establish a connection to our PostgreSQL database. The “establish” method takes a connection string as a parameter, which contains information such as the username, password, and the name of the database.</p>
+
+            <p>You should now be able to run your Rust project using the following command:</p>
+
+            <pre><code>cargo run</code></pre>
+
+            <p>This will output “Connection to the database established!”, indicating that the connection to the database was successful.</p>
+
+            <p>You can use the diesel library to create tables and insert, update, and select data from the database.</p>
+
+            <h3>Conclusion</h3>
+            <p>Rust’s built-in support for concurrency and parallelism make it a great choice for building high-performance systems, and when combined with a robust and reliable database like PostgreSQL, it’s a powerful stack for building performant and scalable web applications.</p>
+
+            <p>It’s important to note that the above example is a basic example of how to connect to a PostgreSQL database using Rust and the diesel library, there are many other features and functionalities to explore.</p>
+        </article>
+    </main>
+    <footer>
+        <p>Made by Tuncay Isgəndərli for <a href="https://apply.holbertonschool.com" target="_blank">Holberton School</a></p>
+    </footer>
+</body>
+</html>

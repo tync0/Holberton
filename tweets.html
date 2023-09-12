@@ -2,27 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://apply.holbertonschool.com/level2/school.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>About Me</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">
-            Most people don&#39;t tag their precise location in Tweets, so we&#39;re removing this ability to simplify your Tweeting experience. You&#39;ll still be able to tag your precise location in Tweets through our updated camera. It&#39;s helpful when sharing on-the-ground moments.
-        </p>
-            &mdash; Support (@Support)
-        <a href="https://twitter.com/Support/status/1141039841993355264?ref_src=twsrc%5Etfw">
-                June 18, 2019
-        </a>
-    </blockquote>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="4bNyNFiZ"></script>
+    <header>
+        <div class="right"><div class="fb-share-button" data-href="http://15.237.24.149/index.html" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F15.237.24.149%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div></div>
+        <div class="right"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tweets.html">Tweets</a></li>
+            <li><a href="projects.html">My Projects</a></li>
+            <li><a href="blogs.html">My Blogs</a></li>
+        </ul>
+    </header>
+    <main>
+        
+        <article>
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">
+                    Most people don&#39;t tag their precise location in Tweets, so we&#39;re removing this ability to simplify your Tweeting experience. You&#39;ll still be able to tag your precise location in Tweets through our updated camera. It&#39;s helpful when sharing on-the-ground moments.
+                </p>
+                    &mdash; Support (@Support)
+                <a href="https://twitter.com/Support/status/1141039841993355264?ref_src=twsrc%5Etfw">
+                        June 18, 2019
+                </a>
+            </blockquote>
+        </article>
+        <aside>
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://http-52-47-108-132.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </aside>
+    </main>
     <footer>
-        Made by Tuncay Isgəndərli for
-        <a href="https://apply.holbertonschool.com" target="_blank">
-            Holberton School
-        </a>.
+        <p>Made by Tuncay Isgəndərli for <a href="https://apply.holbertonschool.com" target="_blank">Holberton School</a></p>
     </footer>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
